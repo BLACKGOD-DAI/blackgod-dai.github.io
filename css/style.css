@@ -721,8 +721,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   text-align: right;
 }
 #l_side .side_webinfo {
-  order: '';
-  background: ;
+  order: ;
+  background: #fff;
 }
 #l_side .side_webinfo .webinfo-item {
   display: block;
