@@ -545,9 +545,9 @@
     var typed = new Typed(el, {
       strings: [desc],
       startDelay: 100,
-      typeSpeed: 100,
+      typeSpeed: 50,
       loop: true,
-      backSpeed: 50,
+      backSpeed: 100,
       showCursor: true
     });
   }
@@ -576,9 +576,9 @@
     var typed = new Typed(el, {
       strings: [desc],
       startDelay: 100,
-      typeSpeed: 100,
+      typeSpeed: 50,
       loop: true,
-      backSpeed: 50,
+      backSpeed: 100,
       showCursor: true
     });
   }
@@ -846,12 +846,16 @@
 <style>
 .aplayer .aplayer-lrc p {
   
+  display: none;
+  
   font-size: 12px;
   font-weight: 700;
   line-height: 16px !important;
 }
 
 .aplayer .aplayer-lrc p.aplayer-lrc-current {
+  
+  display: none;
   
   font-size: 15px;
   color: #42b983;

@@ -293,7 +293,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   padding: 8px 16px;
 }
 #l_side .side_blogger {
-  order: ;
+  order: 1;
 }
 #l_side .side_blogger .content {
   padding: 0;
