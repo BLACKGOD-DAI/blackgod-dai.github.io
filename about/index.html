@@ -446,81 +446,6 @@
       </ul>
       
       
-        <div id="appSearch">
-  <div class="search"  @click="showDialog()"><i class="fas fa-search" aria-hidden="true"></i></div>
-  <transition name="fade">
-    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
-      <div class="message-box animated bounceInDown">
-        <h2>
-          <span>
-            <i class="fas fa-search" aria-hidden="true"></i>
-            <span class="title">Search</span>
-          </span>
-          <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
-        </h2>
-        <form class="site-search-form">
-          <input type="text"
-            placeholder="Please enter keywords"
-            id="local-search-input" 
-            @click="getSearchFile()"
-            class="st-search-input"
-            v-model="searchInput"
-          />
-        </form>
-        <div class="result-wrapper">
-          <div id="local-search-result" class="local-search-result-cls"></div>
-        </div>
-      </div>
-    </div>
-  </transition>
-</div>
-<script src="/js/local_search.js"></script>
-<script>
-  var body = document.body || document.documentElement || window;
-  var vm = new Vue({
-    el: '#appSearch',
-    data: {
-      dialogVisible: false,
-      searchInput: '',
-      top: 0,
-    },
-    computed: {
-    },
-    mounted() {
-      window.addEventListener('pjax:complete', () => {
-        this.cancelDialogVisible();
-      })
-    },
-    methods: {
-      showDialog() {
-        this.dialogVisible = true;
-        // 防止页面滚动，只能让弹框滚动
-        this.top = $(document).scrollTop()
-        body.style.cssText = 'overflow: hidden;';
-      },
-      getSearchFile() {
-        if (!this.searchInput) {
-          getSearchFile("/search.xml");
-        }
-      },
-      cancelDialogVisible() {
-        this.dialogVisible = false;
-        body.removeAttribute('style');
-        $(document).scrollTop(this.top)
-      },
-    },
-    created() {}
-  })
-</script>
-<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
-<!-- 下面是搜索基本写法 -->
-<!-- <script type="text/javascript" id="local.search.active">
-  var inputArea = document.querySelector("#local-search-input");
-  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
-  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
-</script> -->
-
-      
 
     </nav>
   </div>
@@ -568,7 +493,7 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>博主: yuang01 | 性别: 男 | 邮箱: <a href="mailto:&#120;&#x78;&#x78;&#120;&#64;&#97;&#97;&#46;&#x63;&#x6f;&#109;">&#120;&#x78;&#x78;&#120;&#64;&#97;&#97;&#46;&#x63;&#x6f;&#109;</a></p>
+        <h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>博主: yuang01 | 性别: 男 | 邮箱: <a href="mailto:&#x78;&#120;&#120;&#120;&#64;&#97;&#97;&#46;&#99;&#111;&#109;">&#x78;&#120;&#120;&#120;&#64;&#97;&#97;&#46;&#99;&#111;&#109;</a></p>
 <h2 id="我的书籍"><a href="#我的书籍" class="headerlink" title="我的书籍"></a>我的书籍</h2><div class="site-card-group"><a class="site-card" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="img"><img src="https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="info"><img src="https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/><span class="title">木兮</span><span class="desc">这是描述</span></div></a>
 <a class="site-card" target="_blank" rel="noopener" href="https://yuang01.gitee.io/"><div class="img"><img src="https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-f549722dac8f777693c090a92498de0f_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="info"><img src="https://pic3.zhimg.com/80/v2-8bb491487280587026cd576b224ca91e_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-8bb491487280587026cd576b224ca91e_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/><span class="title">yuang01</span><span class="desc">这是描述哦</span></div></a>
 <a class="site-card" target="_blank" rel="noopener" href="http://www.baidu.com"><div class="img"><img src="https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/v2-7fcb0d73e1d90788ccf136e22ba7b1bd_r.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/></div><div class="info"><img src="https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-45eb5749949e7f90a5c788f9bc5721ef_1440w.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"/><span class="title">木兮</span><span class="desc">这是描述</span></div></a>
@@ -753,6 +678,67 @@
       
       
       
+  <section class="widget side_recent_post">
+    
+  <header>
+    
+      <a style="color: " href='/tags/'><i class="fas fa-book fa-fw" aria-hidden="true"></i><span class='name'>Recent Article</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      
+      <!-- hash算法 -->
+      
+      <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/08/16/hello-world/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">08-16</span>
+                
+              </div>
+              <a class="post-title" href="/2023/08/16/hello-world/">Hello World</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2018/02/10/Understanding%20Classification%20in%20Supervised%20Machine%20Learning/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">02-10</span>
+                
+              </div>
+              <a class="post-title" href="/2018/02/10/Understanding%20Classification%20in%20Supervised%20Machine%20Learning/">Understanding Classification in Supervised Machine Learning</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
       
       
     

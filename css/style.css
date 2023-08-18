@@ -636,7 +636,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 #l_side .side_recent_post {
   order: ;
-  background: #fff;
+  background: #2f2f2f;
 }
 #l_side .side_recent_post .aside-list .aside-list-item {
   padding: 0.5rem 0;

@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Understanding Classification in Supervised Machine Learning | Data Course Website</title>
+  <title>archives: 2018/2 | Data Course Website</title>
 
   <link rel="icon" type="image/png" href="/favicon1.png">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -446,81 +446,6 @@
       </ul>
       
       
-        <div id="appSearch">
-  <div class="search"  @click="showDialog()"><i class="fas fa-search" aria-hidden="true"></i></div>
-  <transition name="fade">
-    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
-      <div class="message-box animated bounceInDown">
-        <h2>
-          <span>
-            <i class="fas fa-search" aria-hidden="true"></i>
-            <span class="title">Search</span>
-          </span>
-          <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
-        </h2>
-        <form class="site-search-form">
-          <input type="text"
-            placeholder="Please enter keywords"
-            id="local-search-input" 
-            @click="getSearchFile()"
-            class="st-search-input"
-            v-model="searchInput"
-          />
-        </form>
-        <div class="result-wrapper">
-          <div id="local-search-result" class="local-search-result-cls"></div>
-        </div>
-      </div>
-    </div>
-  </transition>
-</div>
-<script src="/js/local_search.js"></script>
-<script>
-  var body = document.body || document.documentElement || window;
-  var vm = new Vue({
-    el: '#appSearch',
-    data: {
-      dialogVisible: false,
-      searchInput: '',
-      top: 0,
-    },
-    computed: {
-    },
-    mounted() {
-      window.addEventListener('pjax:complete', () => {
-        this.cancelDialogVisible();
-      })
-    },
-    methods: {
-      showDialog() {
-        this.dialogVisible = true;
-        // 防止页面滚动，只能让弹框滚动
-        this.top = $(document).scrollTop()
-        body.style.cssText = 'overflow: hidden;';
-      },
-      getSearchFile() {
-        if (!this.searchInput) {
-          getSearchFile("/search.xml");
-        }
-      },
-      cancelDialogVisible() {
-        this.dialogVisible = false;
-        body.removeAttribute('style');
-        $(document).scrollTop(this.top)
-      },
-    },
-    created() {}
-  })
-</script>
-<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
-<!-- 下面是搜索基本写法 -->
-<!-- <script type="text/javascript" id="local.search.active">
-  var inputArea = document.querySelector("#local-search-input");
-  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
-  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
-</script> -->
-
-      
 
     </nav>
   </div>
@@ -528,429 +453,106 @@
   
 </header>
         <!-- 内容区域 -->
-        
- <!-- prismjs 代码高亮 -->
- 
-
-
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
-
-
-  <!-- 文章详情页顶部图片和标题 -->
-
-
-
-
-<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp')">
-  <div class="post-detail-header-mask"></div>
-  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
-  
-  <div class="post-detail-header_info-box">
-    <div class="title-box">
-      <span class="title">
-        Understanding Classification in Supervised Machine Learning
-      </span>
-    </div>
-    
-    
-      
-        <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2023-08-17 |
-        </span>
-      
-
-      
-        <span class="post-detail-header_categories">
-          <i class="iconfont iconbookmark1"></i> category：
-          
-            <a href="/categories/Machine-Learning/" class="post-detail-header_category">
-              Machine Learning
-            </a>
-          
-        </span>
-      
-
-      
-    
+        <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+<div class="archive-header" style="background-image:url('https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c')">
+  <div class="archive-header-title">
+    archive
   </div>
+  <div class="archive-header-desc">
   
-  
-</div>
-
-
-
-
-
-<div class="post-detail-content post-row" 
-  style="padding-top: 0px;">
-  <div class="main-content">
-    <article class="post post-detail">
-      <div class="post-content">
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>In the vast realm of artificial intelligence and machine learning, one of the fundamental techniques that plays a pivotal role is classification. Classification, a subset of supervised learning, is a powerful tool that enables machines to categorize data points into distinct classes or groups. This article delves into the nuances of classification, its significance, and real-world applications, providing a comprehensive understanding of this essential aspect of machine learning.</p>
-<h2 id="Defining-Classification"><a href="#Defining-Classification" class="headerlink" title="Defining Classification"></a>Defining Classification</h2><p>Classification, in the context of supervised machine learning, involves training a model to predict the categorical class of new data based on historical examples. The aim is to teach the algorithm to recognize patterns and features that differentiate different classes. For instance, imagine a scenario where you want to categorize emails as either “spam” or “not spam.” Classification algorithms analyze various attributes of the email, such as keywords and sender information, to make an informed prediction.</p>
-<h2 id="Key-Components-of-Classification"><a href="#Key-Components-of-Classification" class="headerlink" title="Key Components of Classification"></a>Key Components of Classification</h2><h3 id="1-Training-Data"><a href="#1-Training-Data" class="headerlink" title="1. Training Data:"></a>1. Training Data:</h3><p>The foundation of classification lies in a labeled dataset that includes examples with known classes. Each data point is paired with the correct class label, serving as the model’s training material.</p>
-<h3 id="2-Feature-Selection"><a href="#2-Feature-Selection" class="headerlink" title="2. Feature Selection:"></a>2. Feature Selection:</h3><p>Features are the attributes or characteristics of the data that the model uses to distinguish between classes. Effective feature selection is crucial for accurate classification.</p>
-<h3 id="3-Classifier-Algorithms"><a href="#3-Classifier-Algorithms" class="headerlink" title="3. Classifier Algorithms:"></a>3. Classifier Algorithms:</h3><p>These are mathematical models that learn from the training data and assign new, unlabeled data points to predefined classes. Common classifiers include Decision Trees, Support Vector Machines, and Neural Networks.</p>
-<h3 id="4-Evaluation-Metrics"><a href="#4-Evaluation-Metrics" class="headerlink" title="4. Evaluation Metrics:"></a>4. Evaluation Metrics:</h3><p>To measure the performance of a classification model, various metrics like accuracy, precision, recall, and F1-score are used. These metrics provide insights into the model’s effectiveness in making accurate predictions.</p>
-<h2 id="Applications-of-Classification"><a href="#Applications-of-Classification" class="headerlink" title="Applications of Classification"></a>Applications of Classification</h2><p>The real-world applications of classification are diverse and impactful. Let’s explore some domains where classification algorithms shine:</p>
-<p>Image Recognition: Classification is extensively used in image recognition tasks. It enables systems to identify objects, animals, and even human faces in images. For instance, self-driving cars utilize classification algorithms to recognize road signs, pedestrians, and obstacles.</p>
-<h3 id="1-Healthcare-Diagnosis"><a href="#1-Healthcare-Diagnosis" class="headerlink" title="1. Healthcare Diagnosis:"></a>1. Healthcare Diagnosis:</h3><p>Medical professionals employ classification algorithms to diagnose diseases based on patient data and medical images. These algorithms aid in early disease detection and personalized treatment recommendations.</p>
-<h3 id="2-Customer-Segmentation"><a href="#2-Customer-Segmentation" class="headerlink" title="2. Customer Segmentation:"></a>2. Customer Segmentation:</h3><p>Businesses leverage classification to segment customers based on their behavior, preferences, and demographics. This helps tailor marketing strategies and enhance customer experiences.</p>
-<h3 id="3-Sentiment-Analysis"><a href="#3-Sentiment-Analysis" class="headerlink" title="3. Sentiment Analysis:"></a>3. Sentiment Analysis:</h3><p>In the era of social media, sentiment analysis utilizes classification to determine whether a piece of text expresses positive, negative, or neutral sentiment. This is invaluable for gauging public opinion and monitoring brand perception.</p>
-<h2 id="Challenges-and-Considerations"><a href="#Challenges-and-Considerations" class="headerlink" title="Challenges and Considerations"></a>Challenges and Considerations</h2><p>While classification is a powerful tool, it comes with challenges. Overfitting, where the model performs well on training data but poorly on new data, and bias in training data are common pitfalls. Addressing these challenges requires techniques like cross-validation and data augmentation.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Classification is the bedrock of supervised machine learning, enabling machines to categorize data with remarkable accuracy. Its applications span various domains, from healthcare to finance, revolutionizing industries and enhancing decision-making processes. Understanding the intricacies of classification empowers us to harness its potential and create intelligent systems that can make sense of the vast amounts of data in our world. As machine learning continues to evolve, classification remains a cornerstone, driving innovation and shaping the future of technology.</p>
-<p>—————————————————————————————————————</p>
-<p>In summary, classification is a crucial aspect of supervised machine learning that empowers algorithms to categorize data into distinct classes. Its applications are vast, and understanding its components and challenges is essential for building accurate and effective classification models. With the ever-growing influence of artificial intelligence, classification continues to shape our digital landscape and drive transformative change across industries.</p>
-
-      </div>
-      <div class="post-tags-categories">
-        
-        <div class="tags">
-          
-            <a href="/tags/Classification/" class="">
-              Classification
-            </a>
-          
-        </div>
-        
-      </div>
-      
-        <div class="copyright">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-    <strong>author:  </strong>Davis Dai</a>
-    </li>
-    <li class="post-copyright-link">
-    <strong>link:  </strong>
-    <a href="/2023/08/17/Understanding Classification in Supervised Machine Learning/" target="_blank" title="Understanding Classification in Supervised Machine Learning">http://example.com/2023/08/17/Understanding Classification in Supervised Machine Learning/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>Copyright notice:   </strong>
-      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      reprint policy. If reproduced, please indicate source!
-    </li>
-  </ul>
-<div>
-      
-    </article>
-    <!-- 上一篇文章和下一篇文章 -->
-    
-      <!-- 文章详情页的上一页和下一页 -->
-<div class="post-nav">
-
-
-
-
-
-  
-  <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
-    </div>
-    <a href="/2023/08/16/hello-world/" class="post-nav-link">
-      <div class="title">
-        Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Hello World</div>
-      </div>
-      <!-- <div class="content">
-        Welcome to Hexo! This is your very first post. Check documen
-      </div> -->
-    </a>
-  </div>
-
-</div>
-
-    
-    
-
-    <!-- 打赏 -->
-    
-
-    <!-- 分享 -->
-    
-      <!-- https://github.com/overtrue/share.js -->
-<!-- 文章详情页的分享 -->
-<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-
-<script src="/js/shareJs/social-share.min.js"></script>
-</script>
-
-<style>
-  .social-share {
-    margin: 20px 0;
-  }
-</style>
-
-
-    
-    
-    <!-- 评论 -->
-    <!-- 评论 -->
-
-  <div id="myComment">
-    
-      <div id="gitment-container"></div>
-
-    
-  </div>
-
-<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
-
-
-  </div>
-
-  <!-- 目录 -->
-  <aside id='l_side'>
-  
-    
-      <section class="widget side_blogger">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img src='/medias/profile.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Data World</h2>
-        
-        
-          <p>A dynamic online platform that serves as a hub for data enthusiasts, professionals, and learners.</p>
-
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@davisd.dgj@gmail.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/yuang01/hexo-theme-bamboo"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-  
-  
-
-  <div class="layout_sticky">    
-    
-      
-<section class="widget side_toc">
-  
-  <header>
-    
-      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name' style="color: ">本文目录</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="toc-main">
-      <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Defining-Classification"><span class="toc-text">Defining Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Components-of-Classification"><span class="toc-text">Key Components of Classification</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Training-Data"><span class="toc-text">1. Training Data:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Feature-Selection"><span class="toc-text">2. Feature Selection:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Classifier-Algorithms"><span class="toc-text">3. Classifier Algorithms:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Evaluation-Metrics"><span class="toc-text">4. Evaluation Metrics:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Applications-of-Classification"><span class="toc-text">Applications of Classification</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Healthcare-Diagnosis"><span class="toc-text">1. Healthcare Diagnosis:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Customer-Segmentation"><span class="toc-text">2. Customer Segmentation:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Sentiment-Analysis"><span class="toc-text">3. Sentiment Analysis:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Challenges-and-Considerations"><span class="toc-text">Challenges and Considerations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol> -->
-        <div class="toc"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- 手机端目录按钮 -->
-<div id="toc-mobile-btn">
-  <i class="fas fa-list-ul" aria-hidden="true"></i>
-</div>
-
-      
-    
-  </div>
-</aside>
-
-  <!-- 图片放大 Wrap images with fancybox support -->
-  <script src="/js/wrapImage.js"></script>
-</div>
-
-<!-- 文章详情页背景图 -->
-<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
-	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
-	<transition-group tag="ul" :name="names">
-		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
-			<img :src="image" class="bg-swiper-img no-lazy">
-		</li>
-	</transition-group>
-</div>
-<script>
-	var vm = new Vue({
-		el: '#appBgSwiper',
-		data: {
-			names: '' || 'fade' || 'fade', // translate-fade fade
-			mark: 0,
-			img: [],
-			bgColor: '',
-			time: null
-		},
-		methods: {   //添加方法
-			change(i, m) {
-				if (i > m) {
-					// this.names = 'fade';
-				} else if (i < m) {
-					// this.names = 'fade';
-				} else {
-					return;
-				}
-				this.mark = i;
-			},
-			prev() {
-				// this.names = 'fade';
-				this.mark--;
-				if (this.mark === -1) {
-					this.mark = 3;
-					return
-				}
-			},
-			next() {
-				// this.names = 'fade';
-				this.mark++;
-				if (this.mark === this.img.length) {
-					this.mark = 0;
-					return
-				}
-			},
-			autoPlay() {
-				// this.names = 'fade';
-				this.mark++;
-				if (this.mark === this.img.length) {
-					this.mark = 0;
-					return
-				}
-			},
-			play() {
-				let bgImgDelay = '' || '180000'
-				let delay = parseInt(bgImgDelay) || 180000;
-				this.time = setInterval(this.autoPlay, delay);
-			},
-			enter() {
-				clearInterval(this.time);
-			},
-			leave() {
-				this.play();
-			}
-		},
-		created() {
-			this.play()
-		},
-		beforeDestroy() {
-			clearInterval(this.time);
-		},
-		mounted() {
-			let prop = '' || '';
-			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
-			if (isImg) {
-				let img = prop.split(',');
-				let configRoot = '/'
-				let arrImg = [];
-				img.forEach(el => {
-					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
-					var objExp = new RegExp(Expression);
-
-					if (objExp.test(el)) {
-						// http or https
-						arrImg.push(el);
-					} else {
-						// 非http or https开头
-						// 本地文件
-						let firstStr = el.charAt(0);
-						if (firstStr == '/') {
-							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
-						}
-						el = configRoot + el;
-						arrImg.push(el);
-					}
-				})
-				this.img = arrImg;
-			} else {
-				this.bgColor = prop;
-			}
-		}
-	})
-</script>
-
-<style>
-	.bg-swiper-box {
-		position: absolute;
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-
-	.bg-swiper-img {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
-</style>
-
-
-
-
+  <span class="title" id="archive-header-desc"></span>
   <script>
-  function loadMermaid() {
-    if (document.getElementsByClassName('mermaid').length) {
-      if (window.mermaidJsLoad) mermaid.init()
-      else {
-        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
-          window.mermaidJsLoad = true
-          mermaid.initialize({
-            theme: 'default',
-          })
-          if ('true') {
-            mermaid.init();
-          }
-        })
-      }
-    }
-  };
-  document.addEventListener("DOMContentLoaded", function () {
-    loadMermaid();
-  })
-
-  document.addEventListener('pjax:complete', function () {
-    loadMermaid();
-  })
-  
+  function typedFn() {
+    const el = '#archive-header-desc';
+    const type = 'archive';
+    let desc = '愿你如风，被人温柔以待'
+    var typed = new Typed(el, {
+      strings: [desc],
+      startDelay: 100,
+      typeSpeed: 50,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  }
+  typedFn();
 </script>
+  
+  </div>
+  <div class="mask-box"></div>
+</div>
 
+<div class="archive-video">
+  <video class="full-video" autoplay loop muted>
+      <source style="width: 100%;height: 100vh;" src="/">
+  </video>
+  <div class="video-header-title">
+    archive
+  </div>
+  <div class="video-header-desc">
+  
+      <span class="title" id="archive-video-header-desc"></span>
+      <script>
+  function typedFn() {
+    const el = '#archive-video-header-desc';
+    const type = 'archive';
+    let desc = '愿你如风，被人温柔以待'
+    var typed = new Typed(el, {
+      strings: [desc],
+      startDelay: 100,
+      typeSpeed: 50,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  }
+  typedFn();
+</script>
+      
+  </div>
+  <div class="mask-box"></div>
+</div>
+
+<!-- hash算法 -->
+
+
+<div class="archive-main">
+  <section class="archive">
+    <div class="archive-content">
+      <ul class="post-archive">
+        
+        
+          
+            
+            <div class="year" data-aos="zoom-in-up">
+                <div class="bullet"></div>
+                <a href="/archives/2018">2018</a>
+            </div>
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
+              <a href="/2018/02/10/Understanding%20Classification%20in%20Supervised%20Machine%20Learning/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">02-10</span>
+              </div>
+              <a class="post-title" href="/2018/02/10/Understanding%20Classification%20in%20Supervised%20Machine%20Learning/">Understanding Classification in Supervised Machine Learning</a>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </section>
+  <div class="w-70">
+    
+  </div>
+</div>
 
       </main>
     </div>
