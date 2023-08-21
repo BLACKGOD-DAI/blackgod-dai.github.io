@@ -473,19 +473,12 @@
   <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
     
       <swiper-slide>
-        <div class="item swiper-lazy" data-background="/medias/banner.jpg" style="background-size: 300000px; 
+        <div class="item swiper-lazy" data-background="/medias/banner.jpeg" style="background-size: 300000px; 
           background-position: left center;" style="position: relative;">
           <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
             <div class="flag">
               
-              <div class="swiper-video">
-                <video class="full-video" poster="https://img14.360buyimg.com/ddimg/jfs/t1/175057/18/19582/882056/60ee7ac8Ef0045710/202d2ad878684a3b.gif" autoplay loop muted style="width: 100%;height:100%;object-fit: cover;">
-                  <source style="width: 100%;height: 100vh;" src="/medias/video.mp4">
-                </video>
-                <div class="swiper-video-maskBox"></div>
-              </div>
-              
-              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/banner.jpg" style="height: 100%; background-size: cover; 
+              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/banner.jpeg" style="height: 100%; background-size: cover; 
                 background-position: center center;">
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
               </div>
@@ -1044,10 +1037,10 @@
 @media (min-width: 992px) {
   
     .swiper-video {
-      display: block;
+      display: none;
     }
     .swiper-default-bgImg {
-      display: none;  
+      display: block;  
     }
   
 }
@@ -1083,6 +1076,17 @@
     <!-- 首页文章置顶 -->
     
 
+
+<div class="topArticle reveal">
+	<h3><i class="fas fa-thumbs-o-up" aria-hidden="true"></i>Recommend Articles</h3>
+	<div class="articles">
+		
+			
+		
+			
+		
+	</div>
+</div>
 
 
     <div class="bg-floor" id="home-bg-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
@@ -1121,7 +1125,7 @@
           <div class="post-img-mobile">
             <a href="/2023/08/16/hello-world/" style="background-size: cover; 
               background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              <img class="lazyload lazyload placeholder" src="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
             </a>
           </div>
           <div class="post-content">
@@ -1137,7 +1141,7 @@
       <div class="post-img">
         <a href="/2023/08/16/hello-world/" style="background-size: cover; 
           background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+          <img class="lazyload lazyload placeholder" src="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
       </div>
     </article>
@@ -1175,7 +1179,7 @@
           <div class="post-img-mobile">
             <a href="/2018/02/10/Understanding%20Classification%20in%20Supervised%20Machine%20Learning/" style="background-size: cover; 
               background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              <img class="lazyload lazyload placeholder" src="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
             </a>
           </div>
           <div class="post-content">
@@ -1191,7 +1195,7 @@
       <div class="post-img">
         <a href="/2018/02/10/Understanding%20Classification%20in%20Supervised%20Machine%20Learning/" style="background-size: cover; 
           background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+          <img class="lazyload lazyload placeholder" src="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
       </div>
     </article>
@@ -1293,7 +1297,7 @@
             <div class="post-img-box">
               <a href="/2023/08/16/hello-world/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
@@ -1314,7 +1318,7 @@
             <div class="post-img-box">
               <a href="/2018/02/10/Understanding%20Classification%20in%20Supervised%20Machine%20Learning/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(6).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
