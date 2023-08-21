@@ -556,7 +556,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/classification-in-supervised-machine-learning" target="_blank" title="Understanding Classification in Supervised Machine Learning">http://example.com/classification-in-supervised-machine-learning</a>
+    <a href="/post/classification-in-supervised-machine-learning" target="_blank" title="Understanding Classification in Supervised Machine Learning">https://blackgod-dai.github.io/post/classification-in-supervised-machine-learning</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -580,7 +580,7 @@
       background-position: center center;">
       <img class="lazyload lazyload placeholder" src="/medias/%E4%BE%8B%E5%9B%BE%20(5).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(5).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
     </div>
-    <a href="/regression-in-supervised-machine-learning" class="post-nav-link">
+    <a href="/post/regression-in-supervised-machine-learning" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> Prev:
         <div class="title-text">Regression in Supervised Machine Learning: Understanding and Applications</div>
@@ -748,7 +748,7 @@
             
 
             <div class="post-img-box">
-              <a href="/regression-in-supervised-machine-learning" class="post-img " style="background-size: cover; 
+              <a href="/post/regression-in-supervised-machine-learning" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/medias/%E4%BE%8B%E5%9B%BE%20(5).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(5).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
@@ -759,7 +759,7 @@
                   <span class="post-date">02-14</span>
                 
               </div>
-              <a class="post-title" href="/regression-in-supervised-machine-learning">Regression in Supervised Machine Learning: Understanding and Applications</a>
+              <a class="post-title" href="/post/regression-in-supervised-machine-learning">Regression in Supervised Machine Learning: Understanding and Applications</a>
             </div>
           </div>
         
@@ -769,7 +769,7 @@
             
 
             <div class="post-img-box">
-              <a href="/classification-in-supervised-machine-learning" class="post-img " style="background-size: cover; 
+              <a href="/post/classification-in-supervised-machine-learning" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/medias/%E4%BE%8B%E5%9B%BE%20(13).jpg" class="lazyload placeholder" data-srcset="/medias/%E4%BE%8B%E5%9B%BE%20(13).jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
@@ -780,7 +780,7 @@
                   <span class="post-date">02-10</span>
                 
               </div>
-              <a class="post-title" href="/classification-in-supervised-machine-learning">Understanding Classification in Supervised Machine Learning</a>
+              <a class="post-title" href="/post/classification-in-supervised-machine-learning">Understanding Classification in Supervised Machine Learning</a>
             </div>
           </div>
         
