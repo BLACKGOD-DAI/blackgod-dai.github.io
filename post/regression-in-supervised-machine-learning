@@ -223,71 +223,62 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="/tags" class="drawer-menu-item-link">
-                  
-                  <span class="name">Tags</span>
-                </a>
-              
-            </li>
-          
-            <li class="drawer-box-content_item" style="position: relative;">
-              
-                <a href="/categories" class="drawer-menu-item-link">
-                  
-                  <span class="name">Categories</span>
-                </a>
-              
-            </li>
-          
-            <li class="drawer-box-content_item" style="position: relative;">
-              
-                <a href="/friends" class="drawer-menu-item-link">
-                  
-                  <span class="name">Friends</span>
-                </a>
-              
-            </li>
-          
-            <li class="drawer-box-content_item" style="position: relative;">
-              
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
                   <span>
                     
-                    <span class="name">Othes</span>
+                    <span class="name">Artificial Intelligence</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(5)">
+                <ul class="drawer-sub-menu" v-if="isOpen(2)">
                   
                   <li>
-                    <a href="/gallery">
+                    <a href="/categories/Machine-Learning/">
                       
-                      <span>Gallery</span>
+                      <span>Machine Learning</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/freinds">
+                    <a href="/categories/Deep-Learning/">
                       
-                      <span>Backlinks</span>
+                      <span>Deep Learning</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/categories/Computer-Vision/">
                       
-                      <span>About us</span>
+                      <span>Computer Vision</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a target="_blank" rel="noopener" href="http://google.com">
+                    <a href="/categories/AI-Applications/">
                       
-                      <span>Google</span>
+                      <span>AI Applications</span>
                     </a>
                   </li>
                   
                 </ul>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                  <span class="name">About us</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a target="_blank" rel="noopener" href="https://www.google.com" class="drawer-menu-item-link">
+                  
+                  <span class="name">Google</span>
+                </a>
               
             </li>
           
@@ -376,69 +367,60 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/tags" class="menu-item-link" title="Tags">
+                <a href="javascript:;" class="menu-item-link" title="Artificial Intelligence">
                   
-                  <span class="name">Tags</span>
-                </a>
-              
-            </li>
-          
-            <li class="menu-item" style="position: relative;">
-              
-                <a href="/categories" class="menu-item-link" title="Categories">
-                  
-                  <span class="name">Categories</span>
-                </a>
-              
-            </li>
-          
-            <li class="menu-item" style="position: relative;">
-              
-                <a href="/friends" class="menu-item-link" title="Friends">
-                  
-                  <span class="name">Friends</span>
-                </a>
-              
-            </li>
-          
-            <li class="menu-item" style="position: relative;">
-              
-                <a href="javascript:;" class="menu-item-link" title="Othes">
-                  
-                  <span class="name">Othes</span>
+                  <span class="name">Artificial Intelligence</span>
                   <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
                 </a>
                 <ul class="sub-menu">
                   
                   <li>
-                    <a href="/gallery">
+                    <a href="/categories/Machine-Learning/">
                       
-                      <span>Gallery</span>
+                      <span>Machine Learning</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/freinds">
+                    <a href="/categories/Deep-Learning/">
                       
-                      <span>Backlinks</span>
+                      <span>Deep Learning</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/categories/Computer-Vision/">
                       
-                      <span>About us</span>
+                      <span>Computer Vision</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a target="_blank" rel="noopener" href="http://google.com">
+                    <a href="/categories/AI-Applications/">
                       
-                      <span>Google</span>
+                      <span>AI Applications</span>
                     </a>
                   </li>
                   
                 </ul>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="About us">
+                  
+                  <span class="name">About us</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a target="_blank" rel="noopener" href="https://www.google.com" class="menu-item-link" title="Google">
+                  
+                  <span class="name">Google</span>
+                </a>
               
             </li>
           

@@ -223,71 +223,62 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="/tags" class="drawer-menu-item-link">
-                  
-                  <span class="name">Tags</span>
-                </a>
-              
-            </li>
-          
-            <li class="drawer-box-content_item" style="position: relative;">
-              
-                <a href="/categories" class="drawer-menu-item-link">
-                  
-                  <span class="name">Categories</span>
-                </a>
-              
-            </li>
-          
-            <li class="drawer-box-content_item" style="position: relative;">
-              
-                <a href="/friends" class="drawer-menu-item-link">
-                  
-                  <span class="name">Friends</span>
-                </a>
-              
-            </li>
-          
-            <li class="drawer-box-content_item" style="position: relative;">
-              
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(5)">
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(2)">
                   <span>
                     
-                    <span class="name">Othes</span>
+                    <span class="name">Artificial Intelligence</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(5)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(2)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(5)">
+                <ul class="drawer-sub-menu" v-if="isOpen(2)">
                   
                   <li>
-                    <a href="/gallery">
+                    <a href="/categories/Machine-Learning/">
                       
-                      <span>Gallery</span>
+                      <span>Machine Learning</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/freinds">
+                    <a href="/categories/Deep-Learning/">
                       
-                      <span>Backlinks</span>
+                      <span>Deep Learning</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/categories/Computer-Vision/">
                       
-                      <span>About us</span>
+                      <span>Computer Vision</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a target="_blank" rel="noopener" href="http://google.com">
+                    <a href="/categories/AI-Applications/">
                       
-                      <span>Google</span>
+                      <span>AI Applications</span>
                     </a>
                   </li>
                   
                 </ul>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                  <span class="name">About us</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a target="_blank" rel="noopener" href="https://www.google.com" class="drawer-menu-item-link">
+                  
+                  <span class="name">Google</span>
+                </a>
               
             </li>
           
@@ -376,69 +367,60 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/tags" class="menu-item-link" title="Tags">
+                <a href="javascript:;" class="menu-item-link" title="Artificial Intelligence">
                   
-                  <span class="name">Tags</span>
-                </a>
-              
-            </li>
-          
-            <li class="menu-item" style="position: relative;">
-              
-                <a href="/categories" class="menu-item-link" title="Categories">
-                  
-                  <span class="name">Categories</span>
-                </a>
-              
-            </li>
-          
-            <li class="menu-item" style="position: relative;">
-              
-                <a href="/friends" class="menu-item-link" title="Friends">
-                  
-                  <span class="name">Friends</span>
-                </a>
-              
-            </li>
-          
-            <li class="menu-item" style="position: relative;">
-              
-                <a href="javascript:;" class="menu-item-link" title="Othes">
-                  
-                  <span class="name">Othes</span>
+                  <span class="name">Artificial Intelligence</span>
                   <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
                 </a>
                 <ul class="sub-menu">
                   
                   <li>
-                    <a href="/gallery">
+                    <a href="/categories/Machine-Learning/">
                       
-                      <span>Gallery</span>
+                      <span>Machine Learning</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/freinds">
+                    <a href="/categories/Deep-Learning/">
                       
-                      <span>Backlinks</span>
+                      <span>Deep Learning</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a href="/me">
+                    <a href="/categories/Computer-Vision/">
                       
-                      <span>About us</span>
+                      <span>Computer Vision</span>
                     </a>
                   </li>
                   
                   <li>
-                    <a target="_blank" rel="noopener" href="http://google.com">
+                    <a href="/categories/AI-Applications/">
                       
-                      <span>Google</span>
+                      <span>AI Applications</span>
                     </a>
                   </li>
                   
                 </ul>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="About us">
+                  
+                  <span class="name">About us</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a target="_blank" rel="noopener" href="https://www.google.com" class="menu-item-link" title="Google">
+                  
+                  <span class="name">Google</span>
+                </a>
               
             </li>
           
@@ -497,7 +479,7 @@
 <h3 id="Our-Mission"><a href="#Our-Mission" class="headerlink" title="Our Mission"></a>Our Mission</h3><p>Our mission is simple yet profound: to empower individuals and businesses with the insights and skills they need to harness the power of data. From data enthusiasts to seasoned professionals, our goal is to nurture a community that thrives on shared knowledge and collective growth.</p>
 <h3 id="Unveiling-Data’s-Mysteries"><a href="#Unveiling-Data’s-Mysteries" class="headerlink" title="Unveiling Data’s Mysteries"></a>Unveiling Data’s Mysteries</h3><p>Since our inception, we’ve been on a mission to unravel the mysteries hidden within data. Our team of dedicated experts has tirelessly sifted through datasets, applied cutting-edge algorithms, and dissected complex trends to bring you actionable insights. Our commitment to precision and depth ensures that you receive only the most accurate and relevant information.</p>
 <h3 id="Knowledge-Curation-and-Sharing"><a href="#Knowledge-Curation-and-Sharing" class="headerlink" title="Knowledge Curation and Sharing"></a>Knowledge Curation and Sharing</h3><p>At DDD Data World, we believe that knowledge is meant to be shared. We’ve painstakingly curated a treasure trove of articles, tutorials, case studies, and resources that cater to learners of all levels. Whether you’re diving into the world of data science for the first time or looking to sharpen your skills, our content is designed to guide, inspire, and empower.</p>
-<h3 id="What-We-Are"><a href="#What-We-Are" class="headerlink" title="What We Are"></a>What We Are</h3><div class="tag-plugin post-swiper-container" width="fill"><div class="swiper-wrapper"><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">我的相册1</p><img no-lazy class="swiper-slide-img" src="/medias/%E4%BE%8B%E5%9B%BE%EF%BC%8813%EF%BC%89.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">我的相册2</p><img no-lazy class="swiper-slide-img" src="/medias/%E4%BE%8B%E5%9B%BE%EF%BC%8814%EF%BC%89.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">我的相册3</p><img no-lazy class="swiper-slide-img" src="/medias/%E4%BE%8B%E5%9B%BE%EF%BC%8815%EF%BC%89.jpg"></a></div><div class="swiper-slide"><a class="swiper-slide-href_tag" href="javascript:;"><p class="ani animated swiper-slide-desc_tag" swiper-animate-effect="fadeInDown">我的相册4</p><img no-lazy class="swiper-slide-img" src="/medias/%E4%BE%8B%E5%9B%BE%EF%BC%8816%EF%BC%89.jpg"></a></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
+<h3 id="What-We-Are"><a href="#What-We-Are" class="headerlink" title="What We Are"></a>What We Are</h3><div class="tag-plugin post-swiper-container" width="fill"><div class="swiper-wrapper"></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
 
 <h3 id="Building-a-Data-Driven-Community"><a href="#Building-a-Data-Driven-Community" class="headerlink" title="Building a Data-Driven Community"></a>Building a Data-Driven Community</h3><p>Beyond being just a platform, DDD Data World is a vibrant community of data enthusiasts, analysts, scientists, and innovators. Our forums and discussion boards are spaces where ideas flow freely, questions find answers, and collaboration sparks innovation. Together, we’re building a community that thrives on the exchange of insights and the celebration of collective achievements.</p>
 <h3 id="Our-Commitment-to-Excellence"><a href="#Our-Commitment-to-Excellence" class="headerlink" title="Our Commitment to Excellence"></a>Our Commitment to Excellence</h3><p>When you explore DDD Data World, you’re not just accessing information – you’re tapping into a world of excellence. Our commitment to quality, accuracy, and relevance is a testament to our dedication to serving you with the best possible data-driven experience.</p>
@@ -793,7 +775,7 @@
 			clearInterval(this.time);
 		},
 		mounted() {
-			let prop = 'https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp' || '';
+			let prop = '' || '';
 			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
 			if (isImg) {
 				let img = prop.split(',');
