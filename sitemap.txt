@@ -5,6 +5,6 @@ https://blackgod-dai.github.io/post/classification-in-supervised-machine-learnin
 https://blackgod-dai.github.io/post/regression-in-supervised-machine-learning
 https://blackgod-dai.github.io/friends/index.html
 https://blackgod-dai.github.io/
-https://blackgod-dai.github.io/tags/Classification/
 https://blackgod-dai.github.io/tags/Regression/
+https://blackgod-dai.github.io/tags/Classification/
 https://blackgod-dai.github.io/categories/Machine-Learning/
