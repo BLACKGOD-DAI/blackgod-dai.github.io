@@ -293,7 +293,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   padding: 8px 16px;
 }
 #l_side .side_blogger {
-  order: 1;
+  order: -10;
 }
 #l_side .side_blogger .content {
   padding: 0;
@@ -616,7 +616,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   background: rgba(213,213,213,0.8);
 }
 #l_side .side_tagcloud {
-  background: #fff;
+  background: #2f2f2f;
   order: ;
 }
 #l_side .side_tagcloud .content {
@@ -939,7 +939,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .header .header-content .navbar .menu .menu-item .sub-menu li {
   background: rgba(47,47,47,0.8);
-  width: 140px;
+  width: 150px;
   text-align: center;
   line-height: 1.2;
 }
