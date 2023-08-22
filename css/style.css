@@ -1306,6 +1306,15 @@ pre:hover::-webkit-scrollbar-thumb:hover,
     transform: translateY(0);
   }
 }
+.post-header-desc {
+  z-index: 2;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.4em;
+  font-family: 'Architects Daughter', cursive !important;
+  color: #fff;
+  min-height: 1.4em;
+}
 @media (max-width: 551px) {
   .post-detail-header {
     height: 360px;
