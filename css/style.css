@@ -1222,6 +1222,15 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   font-weight: lighter;
   font-family: Consolas, 'Courier New';
 }
+.post-detail-header .post-header-desc {
+  z-index: 2;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.4em;
+  font-family: 'Architects Daughter', cursive !important;
+  color: #fff;
+  min-height: 1.4em;
+}
 .post-detail-header .post-detail-header-mask {
   position: absolute;
   left: 0;
@@ -1305,15 +1314,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
     opacity: 1;
     transform: translateY(0);
   }
-}
-.post-header-desc {
-  z-index: 2;
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.4em;
-  font-family: 'Architects Daughter', cursive !important;
-  color: #fff;
-  min-height: 1.4em;
 }
 @media (max-width: 551px) {
   .post-detail-header {
